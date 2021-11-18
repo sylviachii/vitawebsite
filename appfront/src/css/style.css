@@ -1,53 +1,9 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-</script>
-
-<script>
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
-
-
-// import MainContent from '@/components/MainContent/index.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Header,
-    Footer,
-
-    // MainContent
-  }
-}
-</script>
-<template>
-  <div id="app">
-    <Header />
-     <!-- <img src="./assets/logo.png">
-      <h1>Hello Vue Router App!</h1>
-      <router-link to="/">Go to Home</router-link>
-      <router-link to="/About">Go to About</router-link>
-      <section>-->
-      <router-view></router-view>
-      </section>
-    <Footer />
-  </div>
-</template>
-
-
-
-<style>
-#app {
-
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap');
 
 body {
-  
+  background-color: #19caad20;
   font-family: 'Noto Serif TC', serif;
   letter-spacing: 4.5px;
-  overflow-x: hidden;
 }
 section {
   padding: 20px 40px;
@@ -60,25 +16,6 @@ h1,h2,h3,h4,h5 {
 p{
   color: #7e7e7e;
 }
-
-@keyframes dong { 
-    0% {             
-    transform: translate(0px, 0px);   
-    }            
-    50% {                
-    transform: translate(0px, -10px);
-    }            
-    100% {                
-    transform: translate(0px, 0px);
-     }
-}
- .move-img{
-    animation: dong 1s infinite;
-  }
-.titlestyles{
-  padding-top: 80px !important;
-}
-
 h1.titlestyle:before{
   content: '';
   position: absolute;
@@ -111,7 +48,9 @@ ul,li {
 a{
   text-decoration:none!important;
 }
-
+button {
+  padding: 12px;
+}
 .header-top{
   background-color: #FFF5E2;
   position: sticky;
@@ -153,41 +92,30 @@ ul.header-menu li{
   padding-right: 30px;
 }
 
-
-ul.header-menu  li.nav-item:hover {
-  cursor: pointer; 
-}
-
-ul.header-menu  li.nav-item a:hover:after {
+ul.header-menu li a:hover {
   content: " ";
-  background-image: url(./img/linkicon.png);
+  background-image: url(../img/linkicon.png);
   background-repeat: no-repeat;
+  background-position: 32px 180px;
   color:#847A62;
-  background-position: 20px 4px;
-  display: flex;
-  flex-wrap: wrap-reverse;
-  background-size: 40%;
-  height: 40px;
-  cursor: pointer !important; 
 }
-
+  
+}
 .banner-block{
-  width: 100%;
-  overflow: hidden;
-  background-image: url(./img/banner-1.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
   height: 100vh;
+  width: 100vw;
+}
+.banner-block img{
+  width: 100vw;
+  max-width: 100%;
 }
 span.titleicon {
-    background-image: url(./img/titleicon.png);
+    background-image: url(../img/titleicon.png);
     background-repeat: no-repeat;
     position: relative;
     top: -65px;
     left: 47%;
     max-width: 100%;
-    padding: 10px;
 }
 
 .sister-brand{
@@ -195,7 +123,7 @@ span.titleicon {
   background-color: #FBF1ED;
 }
 .sister-brand-bg{
-  background-image: url("./img/footer-bg.png");
+  background-image: url("../img/footer-bg.png");
   background-size: 60%;
 }
 .page-top{
@@ -245,11 +173,10 @@ p.info-list-title{
 }
 ul.footer-menu li:hover {
   content: " ";
-  background-image: url(./img/linkicon.png);
+  background-image: url(../img/linkicon.png);
   background-repeat: no-repeat;
   background-position: 32px 180px;
   margin-bottom: -66px;
   color: #7c7c7c;
 }
 
-</style>
